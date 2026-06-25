@@ -106,9 +106,28 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Brand Statement */}
+      <section className="relative w-full h-[200px] bg-[#F5EFE7] overflow-hidden select-none">
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
+          <img
+            src="/Images/habibti%20logo.png"
+            alt=""
+            className="w-[260px] sm:w-[320px] md:w-[380px] h-auto object-contain opacity-[0.07]"
+          />
+        </div>
+        <div className="relative h-full flex flex-col items-center justify-center text-center px-6">
+          <h2 className="font-serif text-[48px] md:text-[56px] font-light tracking-[0.15em] text-[#2a2a2a] leading-none">
+            HABIBTI
+          </h2>
+          <p className="mt-4 text-[18px] md:text-[20px] uppercase tracking-[0.25em] text-brand-gold font-light">
+            MODEST. TRENDY. UNAPOLOGETIC.
+          </p>
+        </div>
+      </section>
+
       {/* Editorial Preview */}
       <section className="w-full bg-[#F5EFE7] py-[100px] px-6 md:px-12 select-none">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 xl:gap-20 items-center">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1.15fr_0.7fr_1.15fr] gap-12 lg:gap-16 xl:gap-20 items-center">
           
           {/* Column 1: Left Campaign Image */}
           <div className="w-full h-[450px] sm:h-[550px] lg:h-[650px] xl:h-[720px] overflow-hidden rounded-[16px] shadow-md bg-brand-stone">
