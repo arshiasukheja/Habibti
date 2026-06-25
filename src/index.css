@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-arabic: 'Amiri', serif;
+  
+  --color-brand-light: #fdfbf7;
+  --color-brand-gold: #c5a880;
+  --color-brand-accent: #8e7a60;
+  --color-brand-dark: #111111;
+  --color-brand-stone: #f4f1ea;
+}
+
+/* Custom global resets and typography */
+html, body {
+  background-color: var(--color-brand-light);
+  color: var(--color-brand-dark);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-brand-light);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-gold);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-accent);
+}
