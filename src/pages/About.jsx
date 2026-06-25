@@ -6,25 +6,30 @@ const About = () => {
     <div className="pb-16">
       {/* Editorial Hero Header */}
       <div
-        className="relative w-full h-[75vh] overflow-hidden bg-brand-stone mb-20"
-        style={{ marginTop: 'var(--navbar-height, 64px)' }}
-      >
-        <img
-          src="/Images/11.jpg"
-          alt="Habibti Editorial Campaign Banner"
-          className="w-full h-full object-cover object-center opacity-90"
-        />
-        <div className="absolute inset-0 bg-brand-dark/25"></div>
-        <div className="absolute inset-0 flex items-center justify-center text-center px-6">
-          <div className="space-y-3 text-white">
-            <span className="text-xs uppercase tracking-[0.35em] text-brand-stone/90 block font-light">
-              About the Brand
-            </span>
-            <h1 className="text-4xl md:text-6xl font-extralight tracking-wider text-white">
-              Our Journey
-            </h1>
-          </div>
-        </div>
+    className="relative w-full h-[50vh] md:h-[55vh] overflow-hidden mb-20"
+    style={{ marginTop: "var(--navbar-height, 64px)" }}
+  >
+    <img
+      src="/Images/11.jpg"
+      alt="Habibti Editorial Campaign Banner"
+      className="w-full h-full object-cover object-center"
+    />
+
+    {/* Dark Overlay */}
+    <div className="absolute inset-0 bg-black/50"></div>
+
+    {/* Content */}
+    <div className="absolute inset-0 flex items-center justify-center text-center px-6">
+      <div className="space-y-3 text-white">
+        <span className="text-xs uppercase tracking-[0.35em] text-brand-stone/90 block font-light">
+          About the Brand
+        </span>
+
+        <h1 className="text-4xl md:text-6xl font-extralight tracking-wider text-white">
+          Our Journey
+        </h1>
+      </div>
+    </div>
       </div>
 
       {/* Meaning of Habibti & Story */}
