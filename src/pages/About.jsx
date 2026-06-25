@@ -10,7 +10,7 @@ const About = () => {
         style={{ marginTop: 'var(--navbar-height, 64px)' }}
       >
         <img
-          src="/Images/1.jpg"
+          src="/Images/11.jpg"
           alt="Habibti Editorial Campaign Banner"
           className="w-full h-full object-cover object-center opacity-90"
         />
@@ -50,7 +50,7 @@ const About = () => {
           {/* Large Story Image */}
           <div className="lg:col-span-7 relative aspect-[16/10] overflow-hidden bg-brand-stone">
             <img
-              src="/Images/2.jpg"
+              src="/Images/10.jpg"
               alt="Model posing in Habibti Campaign"
               className="w-full h-full object-cover object-center"
               loading="lazy"

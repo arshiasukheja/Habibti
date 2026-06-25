@@ -9,7 +9,14 @@ const Footer = () => {
     { name: 'About', path: '/about' },
     { name: 'Collections', path: '/collections' },
     { name: 'Lookbook', path: '/lookbook' },
-    { name: 'Contact', path: '/contact' },
+  ];
+  
+  const services = [
+    'Custom Orders',
+    'Personal Styling',
+    'Worldwide Shipping',
+    'Size Consultation',
+    'Gift Packaging',
   ];
 
   const headingClass =
@@ -59,60 +66,55 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 3: Contact details */}
-          <div className="flex flex-col items-start max-w-[260px]">
-            <h4 className={headingClass}>Contact</h4>
-            <div className="space-y-3 flex flex-col items-start text-[13px] font-light text-brand-muted">
-              <a
-                href="mailto:habibtifashions18@gmail.com"
-                className="flex items-center gap-2.5 text-brand-dark/70 hover:text-brand-gold transition-colors duration-300 group"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-brand-dark/60 group-hover:text-brand-gold transition-colors duration-300 shrink-0">
-                  <rect width="20" height="16" x="2" y="4" rx="2"/>
-                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-                </svg>
-                <span className="relative pb-0.5 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-brand-gold hover:after:w-full after:transition-all after:duration-300 break-all">
-                  habibtifashions18@gmail.com
-                </span>
-              </a>
-              <a
-                href="https://www.instagram.com/habibtifashions"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2.5 text-brand-dark/70 hover:text-brand-gold transition-colors duration-300 group"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-brand-dark/60 group-hover:text-brand-gold transition-colors duration-300 shrink-0">
-                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
-                </svg>
-                <span className="relative pb-0.5 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-brand-gold hover:after:w-full after:transition-all after:duration-300">
-                  @habibtifashions
-                </span>
-              </a>
-            </div>
-          </div>
+          {/* Column 3: Our Services */}
+<div className="flex flex-col items-start">
+  <h4 className={headingClass}>Our Services</h4>
 
-          {/* Column 4: Powered By — anchored bottom-right */}
-          <div className="flex flex-col items-start lg:items-end justify-end h-full">
-            <div className="flex flex-col items-start lg:items-end">
-              <h4 className={`${headingClass} lg:text-right`}>Powered By</h4>
-              <div className="relative group inline-block">
-                <span className="absolute bottom-full left-1/2 lg:left-auto lg:right-0 lg:translate-x-0 -translate-x-1/2 mb-2 px-3 py-1.5 bg-brand-dark text-[10px] text-[#FAF8F4] font-sans tracking-[0.2em] uppercase whitespace-nowrap opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 pointer-events-none rounded-[4px] shadow-lg z-50">
-                  Turning Ideas Into Ventures
-                  <span className="absolute top-full left-1/2 lg:left-auto lg:right-4 -translate-x-1/2 lg:translate-x-0 border-4 border-transparent border-t-brand-dark"></span>
-                </span>
-                <a
-                  href="https://www.foundrhub.in/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm md:text-[15px] font-light tracking-[0.22em] font-serif text-brand-dark hover:text-brand-gold transition-colors duration-300 relative pb-0.5 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-brand-gold hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
-                >
-                  FOUNDRHUB
-                </a>
-              </div>
-            </div>
-          </div>
+  <ul className="space-y-2 flex flex-col items-start">
+    {services.map((service) => (
+      <li
+        key={service}
+        className="text-[13px] uppercase tracking-[0.18em] text-brand-dark/70"
+      >
+        {service}
+      </li>
+    ))}
+  </ul>
+</div>
+
+          {/* Column 4: Connect */}
+<div className="flex flex-col items-start">
+  <h4 className={headingClass}>Connect</h4>
+
+  <div className="space-y-3 flex flex-col items-start text-[13px] font-light text-brand-muted">
+
+    <a
+      href="mailto:habibtifashions18@gmail.com"
+      className="flex items-center gap-2.5 text-brand-dark/70 hover:text-brand-gold transition-colors duration-300"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect width="20" height="16" x="2" y="4" rx="2"/>
+        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+      </svg>
+      habibtifashions18@gmail.com
+    </a>
+
+    <a
+      href="https://www.instagram.com/habibtifashions"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2.5 text-brand-dark/70 hover:text-brand-gold transition-colors duration-300"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect width="20" height="20" x="2" y="2" rx="5"/>
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+      </svg>
+      @habibtifashions
+    </a>
+
+  </div>
+</div>
 
         </div>
 
@@ -120,11 +122,20 @@ const Footer = () => {
         <div className="w-full h-px bg-brand-stone/80 mt-4 mb-3"></div>
 
         {/* Copyright notice */}
-        <div className="text-center">
-          <span className="text-[11px] tracking-[0.25em] uppercase text-brand-dark/45 font-light">
-            © {currentYear} HABIBTI. All Rights Reserved.
-          </span>
-        </div>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-3">
+  <span className="text-[11px] tracking-[0.25em] uppercase text-brand-dark/45 font-light">
+    © {currentYear} HABIBTI. All Rights Reserved.
+  </span>
+
+  <a
+    href="https://www.foundrhub.in/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-[11px] uppercase tracking-[0.25em] text-brand-dark/55 hover:text-brand-gold transition-colors duration-300"
+  >
+    Powered by FoundrHub
+  </a>
+</div>
       </div>
     </footer>
   );

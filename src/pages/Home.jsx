@@ -106,24 +106,31 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Brand Statement */}
-      <section className="relative w-full h-[200px] bg-[#F5EFE7] overflow-hidden select-none">
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
-          <img
-            src="/Images/habibti%20logo.png"
-            alt=""
-            className="w-[260px] sm:w-[320px] md:w-[380px] h-auto object-contain opacity-[0.07]"
-          />
-        </div>
-        <div className="relative h-full flex flex-col items-center justify-center text-center px-6">
-          <h2 className="font-serif text-[48px] md:text-[56px] font-light tracking-[0.15em] text-[#2a2a2a] leading-none">
-            HABIBTI
-          </h2>
-          <p className="mt-4 text-[18px] md:text-[20px] uppercase tracking-[0.25em] text-brand-gold font-light">
-            MODEST. TRENDY. UNAPOLOGETIC.
-          </p>
-        </div>
-      </section>
+    {/* Brand Statement */}
+<section className="relative w-full h-[280px] bg-[#F5EFE7] overflow-hidden">
+  {/* Watermark */}
+  <div
+    className="absolute inset-0 flex items-center justify-center pointer-events-none"
+    aria-hidden="true"
+  >
+    <img
+      src="/Images/habibti%20logo.png"
+      alt=""
+      className="w-[260px] sm:w-[320px] md:w-[340px] h-auto object-contain opacity-[0.06]"
+    />
+  </div>
+
+  {/* Content */}
+  <div className="relative z-10 flex h-full flex-col items-center justify-center pt-6 text-center px-6">
+    <h2 className="font-serif text-[48px] md:text-[56px] font-light tracking-[0.15em] text-[#2a2a2a] leading-none">
+      HABIBTI
+    </h2>
+
+    <p className="mt-5 text-[17px] md:text-[20px] uppercase tracking-[0.28em] text-brand-gold font-light">
+      MODEST. TRENDY. UNAPOLOGETIC.
+    </p>
+  </div>
+</section>
 
       {/* Editorial Preview */}
       <section className="w-full bg-[#F5EFE7] py-[100px] px-6 md:px-12 select-none">
