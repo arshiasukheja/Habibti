@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Button from './Button';
 
 const Hero = ({ 
@@ -12,6 +12,22 @@ const Hero = ({
   height = 'h-[calc(100vh-var(--navbar-height,64px))]',
   overlayOpacity = 'bg-black/25'
 }) => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const videoElement = videoRef.current;
+    if (videoElement) {
+      videoElement.muted = true;
+      videoElement.playsInline = true;
+      const playPromise = videoElement.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // Autoplay may still be blocked by some mobile browsers; keep the video muted and inline.
+        });
+      }
+    }
+  }, [backgroundVideo]);
+
   return (
     <div
       className={`relative ${height} w-full overflow-hidden flex items-center justify-center`}
@@ -20,10 +36,12 @@ const Hero = ({
       {/* Background Media */}
       {backgroundVideo ? (
         <video
+          ref={videoRef}
           autoPlay
           loop
           muted
           playsInline
+          preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
         >
           <source src={backgroundVideo} type="video/mp4" />
